@@ -46,11 +46,11 @@
 
    
       <!-- Home -->
-        <section id="home-section" >
+        <section id="home-section" class="content" >
              <div class="home-inner container-custom" >
                  <div class="kishore" data-aos="fade-up" data-aos-delay="500"
                        data-aos-duration="2000">
-                    <div class="d-flex justify-content-center align-items-middle hvr-wobble-vertical">
+                    <div id="content" class="d-flex justify-content-center align-items-middle hvr-wobble-vertical">
                        <img src="./image/Group 12.svg" class="img-fluid mt-5 pt-5 mx-auto" alt="">
                     </div>
                
@@ -93,7 +93,7 @@
 
 
         <!-- Work -->
-        <section id="work-section">
+        <section id="work-section" class="content">
           
             <div class="home-inner container-custom work-img">
 
@@ -262,7 +262,8 @@
             </footer>
         
             
-      
+      <div class="cursor"></div>
+      <div class="cursor2"></div>
 
 
   <script src="http://code.jquery.com/jquery-3.5.1.min.js"
@@ -280,7 +281,16 @@
     crossorigin="anonymous"></script>
 
   <script>
+    // animate on scroll
     AOS.init();
+
+    //cursor animation
+    var cursor = document.querySelector(".cursor");
+      var cursor2 = document.querySelector(".cursor2");
+      document.addEventListener("mousemove", function (e) {
+        cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
+      });
+
     // Get the current year for copyright
     $("#year").text(new Date().getFullYear());
 
