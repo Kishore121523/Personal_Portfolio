@@ -435,6 +435,9 @@ body {
 
 /* small-screens */
 @media (max-width: 580px) {
+  #cursor-d-none {
+    display: none;
+  }
   .carousel-caption-custom {
     bottom: 160px;
   }
