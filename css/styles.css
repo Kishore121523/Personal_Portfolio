@@ -127,9 +127,7 @@ body {
 .about-text {
   padding: 3rem 2rem;
 }
-.about-head {
-  font-size: 4rem;
-}
+
 .about-text1 {
   color: #fb7712;
   font-size: 2rem;
@@ -138,7 +136,9 @@ body {
 .about-text2 {
   font-size: 1.5rem;
 }
-
+.about-head {
+  font-size: 4rem;
+}
 /* work-section */
 .work-img {
   padding: 5rem 0px;
@@ -448,6 +448,7 @@ body {
   background-color: rgba(255, 255, 255, 0.08);
   border-radius: 5px;
   padding-left: 15px;
+  padding-top: 10px;
 }
 .form__field::placeholder {
   color: transparent;
@@ -654,7 +655,7 @@ body {
     padding: 3rem 2rem;
   }
   .about-head {
-    font-size: 6rem;
+    font-size: 5rem;
   }
   .about-text1 {
     font-size: 3rem;

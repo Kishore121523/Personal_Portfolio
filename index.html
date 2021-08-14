@@ -78,12 +78,18 @@
                 data-aos-mirror="true"
                 data-aos-once="false"
                 data-aos-anchor-placement="top-bottom">
-                  <img src="./image/my image.png" alt="" class="img-fluid py-5">
+                  <img src="./image/my image.png" alt="" class="img-fluid py-5 my-img">
                 </div>
                 <div class="col-md-6 my-auto">
                   <div class="about-text my-auto">
-                  <h1 class="about-head hvr-underline-from-center pb-2">Hello world,</h1>
-                <p class="about-text1">An independent and self-motivated designer and front-end developer.</p>
+                  <!-- <h1 class="about-head hvr-underline-from-center pb-2">Hello world,</h1> -->
+                  <h1 class="about-head pb-2">
+                    <a class="typewrite" data-period="1500"
+                      data-type='[ "Hello World!", "Bonjour Monde!", "Hola Mundo!", "Ciao Mondo!", "Namaste Duniya!" ]'>
+                      <span class="wrap"></span>
+                    </a>
+                  </h1>
+                <p class="about-text1 pt-2">An independent and self-motivated designer and front-end developer.</p>
                 <p class="about-text2">One who embraces teamwork. I always seek opportunities to learn new things. I love to create stuff that makes the world
                   a better place to live.</p>
                 </div>
@@ -115,7 +121,7 @@
                        />
                   <div class="carousel-caption d-md-block ">
                     <div class="d-fle justify-content-cente">
-                      <h1 class="blockquote display-3 text-carousel">
+                      <h1 class="blockquote text-carousel">
                          <span class="text-white">Branding</span>
                       </h1>
                     </div>
@@ -128,7 +134,7 @@
                     <a target="_blank" href="https://drive.google.com/drive/folders/1wToQjXERSkGD3r7SAv9H_wz2Pt4T5Nsf?usp=sharing">
                     <img class="d-block img-fluid work-slider-img" src="./image/item2.png"/>
                       <div class="carousel-caption d-md-block ">
-                        <h1 class="blockquote display-3 text-carousel">
+                        <h1 class="blockquote text-carousel">
                           <span class="text-white"> Concept Design</span>
                         </h1>
                       </div>
@@ -140,7 +146,7 @@
                     <a target="_blank" href="https://github.com/Kishore121523?tab=repositories">
                     <img class="d-block img-fluid work-slider-img" src="./image/item3.png" />
                     <div class="carousel-caption d-md-block ">
-                      <h1 class="blockquote display-3 text-carousel">
+                      <h1 class="blockquote text-carousel">
                         <span class="text-white">Web-Dev</span>
                       </h1>
                     </div>
@@ -154,7 +160,7 @@
                     <img class="d-block img-fluid work-slider-img" src="./image/item4.png"
                        />
                     <div class="carousel-caption d-md-block ">
-                      <h1 class="blockquote display-3 text-carousel">
+                      <h1 class="blockquote text-carousel">
                         <span class="text-white">Social Media Marketing</span>
                       </h1>
                     </div>
@@ -187,13 +193,13 @@
               </div>
 
               <div class="row">
-                <div class="col-md-6"> 
+                <div class="col-md-5 pt-1"> 
                  <form id="myForm">
                     <!-- <div class="form-group">
                       <label for="txt1">Name</label>
                       <input name="name" type="text" class="form-control w-75" placeholder="Enter your name">
                     </div> -->
-                    <div class="form__group field w-75">
+                    <div class="form__group field w-100">
                       <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
                       <label for="name" class="form__label">Name</label>
                     </div>
@@ -204,7 +210,7 @@
                         placeholder="Enter your email">
                       <small id="emailHelp" class="form-text text-muted">You'r email won't be shared with anyone else.</small>
                     </div> -->
-                    <div class="form__group field pt-3 w-75">
+                    <div class="form__group field pt-3 w-100">
                       <input type="input" class="form__field bg" placeholder="Name" name="email" id='email' required />
                       <small id="emailHelp" class="form-text text-muted">You'r email won't be shared with anyone else.</small>
                       <label for="email" class="form__label">Email address</label>
@@ -212,7 +218,7 @@
                   
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-7">
 
                   <!-- <form id="myForm-1"> -->
                     <!-- <div class="form-group">
@@ -318,6 +324,63 @@
     crossorigin="anonymous"></script>
 
   <script>
+
+    var TxtType = function (el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+      };
+
+      TxtType.prototype.tick = function () {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+          this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+          this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+          delta = this.period;
+          this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+          this.isDeleting = false;
+          this.loopNum++;
+          delta = 500;
+        }
+
+        setTimeout(function () {
+          that.tick();
+        }, delta);
+      };
+
+      window.onload = function () {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i = 0; i < elements.length; i++) {
+          var toRotate = elements[i].getAttribute('data-type');
+          var period = elements[i].getAttribute('data-period');
+          if (toRotate) {
+            new TxtType(elements[i], JSON.parse(toRotate), period);
+          }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+      };
 
     
 
