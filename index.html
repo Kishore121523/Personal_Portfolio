@@ -11,6 +11,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+
+
     <!-- font awesome -->
     <link rel="stylesheet" href="./webfonts/all.min.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
@@ -187,15 +189,25 @@
               <div class="row">
                 <div class="col-md-6"> 
                  <form id="myForm">
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                       <label for="txt1">Name</label>
                       <input name="name" type="text" class="form-control w-75" placeholder="Enter your name">
+                    </div> -->
+                    <div class="form__group field w-75">
+                      <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
+                      <label for="name" class="form__label">Name</label>
                     </div>
-                    <div class="form-group">
+
+                    <!-- <div class="form-group">
                       <label for="txt2">Email address</label>
                       <input name="email" type="email" class="form-control w-75" aria-describedby="emailHelp"
                         placeholder="Enter your email">
                       <small id="emailHelp" class="form-text text-muted">You'r email won't be shared with anyone else.</small>
+                    </div> -->
+                    <div class="form__group field pt-3 w-75">
+                      <input type="input" class="form__field bg" placeholder="Name" name="email" id='email' required />
+                      <small id="emailHelp" class="form-text text-muted">You'r email won't be shared with anyone else.</small>
+                      <label for="email" class="form__label">Email address</label>
                     </div>
                   
                 </div>
@@ -203,16 +215,41 @@
                 <div class="col-md-6">
 
                   <!-- <form id="myForm-1"> -->
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                       <label for="txt2">Message</label>
                       <textarea name="message" class="form-control" rows="5" placeholder="Enter email"></textarea>
+                    </div> -->
+                    <div class="form__group field w-100">
+                      <textarea name="message" id='message' class="form__field" rows="4" type="input" placeholder="Enter email"></textarea>
+                      <label for="message" class="form__label">Message</label>
                     </div>
                   <!-- </form> -->
                 </form>
                     </div>
                 </div>
 
-              <button type="button" onclick="SubForm()" class="btn btn-block w-25 mt-4 mx-auto submit-btn">Submit</button>
+              <button type="button" onclick="SubForm(),myFunction()" class="btn btn-block w-25 mt-5 mx-auto submit-btn" data-toggle="modal" data-target="#formModal">Submit</button>
+
+              <!-- modal -->
+              <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content bg-dark">
+                    <div class="modal-header text-white">
+                      <h5 class="modal-title modal-text" id="formModalLabel">Your respone has been submitted.</h5>
+                      <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" >&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body text-white">
+                      <p class="blockquote py-auto my-auto display-1">Thank you for getting in touch!</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
               
               <div class="d-flex">
               <img src="./image/Thank you, Cheers!.png" class=" my-5 mx-auto thank-you" alt="">
@@ -281,6 +318,15 @@
     crossorigin="anonymous"></script>
 
   <script>
+
+    
+
+
+
+    function myFunction() {
+        document.getElementById("myForm").reset();
+           
+      }
     // animate on scroll
     AOS.init();
 
@@ -326,15 +372,17 @@
           url: 'https://api.apispreadsheets.com/data/16848/',
           type: 'post',
           data: $("#myForm").serializeArray(),
-          success: function () {
-            alert("Form Data Submitted :)")
-          },
+          // success: function () {
+          //   alert("Response submitted successfully!")
+          // },
           error: function () {
             alert("There was an error :(")
           }
         });
         
+      
       }
+      
        
 
 
