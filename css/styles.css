@@ -525,7 +525,7 @@ body {
 } */
 
 /* tablet screens */
-@media (min-width: 991.98px) {
+@media (max-width: 991.98px) {
   .home-img {
     background: url(../image/Rectangle\ 1.png);
     background-repeat: repeat;
