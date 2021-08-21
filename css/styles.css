@@ -518,7 +518,7 @@ body {
 
 /* media queries */
 
-@media (max-width: 1191.98px) {
+@media (max-width: 1200.98px) {
   #cursor-d-none {
     display: none;
   }
