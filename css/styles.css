@@ -518,14 +518,26 @@ body {
 
 /* media queries */
 
-@media (max-width: 1200.98px) {
+/* @media (max-width: 1200.98px) {
   #cursor-d-none {
     display: none;
   }
-}
+} */
 
 /* tablet screens */
 @media (max-width: 991.98px) {
+  .home-img {
+    background: url(../image/Artboard\ 1\ copy\ 4@4x.png);
+    background-repeat: repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  #home-section {
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+  }
   .text-icon {
     font-size: 1.3rem;
     display: block;
