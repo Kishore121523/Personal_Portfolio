@@ -518,6 +518,12 @@ body {
 
 /* media queries */
 
+@media (max-width: 1091.98px) {
+  #cursor-d-none {
+    display: none;
+  }
+}
+
 /* tablet screens */
 @media (max-width: 991.98px) {
   .text-icon {
