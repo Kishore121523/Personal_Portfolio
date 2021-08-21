@@ -61,7 +61,7 @@
 /* navbar external end */
 
 body {
-  background: #333;
+  background: black;
   color: white;
 }
 
@@ -81,11 +81,18 @@ body {
   opacity: 100%;
 }
 
-#home-section {
-  background: url(../image/Rectangle\ 2.png);
+.bg-dark-custom {
+  background-color: #181816;
+}
+
+.home-img {
+  background: url(../image/Artboard\ 1\ copy\ 4@4x.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+}
+
+#home-section {
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
@@ -101,13 +108,14 @@ body {
   overflow-x: hidden;
 }
 #about-section {
-  background: url(../image/Group\ 14.png);
+  background: url(../image/Group\ 1.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
+  /* padding-left: ; */
 }
 #contact-section {
   background: url(../image/Rectangle\ 2.png);
@@ -119,7 +127,7 @@ body {
   overflow-x: hidden;
 }
 .go-down {
-  opacity: 70%;
+  opacity: 80%;
   margin-left: 20%;
 }
 
@@ -500,6 +508,11 @@ body {
   box-shadow: none;
 }
 
+.img-thumb {
+  border: 1.5px solid #3b3b3b;
+  border-radius: 5px;
+}
+
 /* media queries */
 
 /* tablet screens */
@@ -526,6 +539,9 @@ body {
   }
   .carousel-caption-custom-four {
     bottom: 20%;
+  }
+  #cursor-d-none {
+    display: none;
   }
 }
 
@@ -664,5 +680,11 @@ body {
   }
   .about-text2 {
     font-size: 2rem;
+  }
+  .home-img {
+    background: url(../image/Artboard\ 1\ copy\ 4@4x.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
   }
 }
