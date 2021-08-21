@@ -525,9 +525,9 @@ body {
 } */
 
 /* tablet screens */
-@media (max-width: 991.98px) {
+@media (min-width: 991.98px) {
   .home-img {
-    background: url(../image/Group\ 13.png);
+    background: url(../image/Rectangle\ 1.png);
     background-repeat: repeat;
     background-size: cover;
     background-attachment: fixed;
