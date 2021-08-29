@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="./webfonts/all.min.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link rel="stylesheet" href="./css/styles.css" />
-  <title>Kishore</title>
+  <title>Potfolio-Kishore</title>
 </head>
 
 <!-- navbar -->
@@ -50,7 +50,7 @@
 
    
       <!-- Home -->
-      <div class="home-img">
+      <div class="home-img content">
         <section id="home-section" class="content" >
              <div class="home-inner container-custom" >
                  <div class="kishore" data-aos="fade-up" data-aos-delay="500"
@@ -88,7 +88,6 @@
                 </div>
                 <div class="col-md-6 my-auto">
                   <div class="about-text my-auto">
-                  <!-- <h1 class="about-head hvr-underline-from-center pb-2">Hello world,</h1> -->
                   <h1 class="about-head pb-2">
                     <a class="typewrite" data-period="1500"
                       data-type='[ "Hello World!", "Bonjour Monde!", "Hola Mundo!", "Ciao Mondo!", "Namaste Duniya!" ]'>
@@ -118,30 +117,36 @@
                   <li data-target="#slider4" data-slide-to="2"></li>
                   <li data-target="#slider4" data-slide-to="3"></li>
                 </ol>
+                <span class="d-flex justify-content-center align-items-center mb-1">
+                <h2 class="blockquote-custom text-muted text-center">Tap the banner to Explore More! </h2> 
+                <img src="./image/2691-hand-click-gesture.gif" class="img-fluid click" alt="">
+                </span>
+              
+
                 <div class="carousel-inner  hvr-overline-from-center">
 
                   <!-- first slide -->
                   <div class="carousel-item active text-center">
                     <a target="_blank" href="https://drive.google.com/drive/folders/19ftj4U6_HRe2LPjoaH1CZjaQsGaFnnJM?usp=sharing" class="">
-                    <img class="d-block img-thumb img-fluid work-slider-img" src="./image/item1.png" alt="First Slide"
-                       />
+                    <div class="d-block img-thumb img-fluid work-slider-img branding-img"></div>
+                    <!-- <img class="d-block img-thumb img-fluid work-slider-img " src="./image/item1.png" alt="First Slide"
+                       /> -->
                   <div class="carousel-caption d-md-block ">
-                    <div class="d-fle justify-content-cente">
-                      <h1 class="blockquote text-carousel">
-                         <span class="text-white">Branding</span>
-                      </h1>
-                    </div>
-                    </div>
+                    <h1 class="blockquote text-carousel">
+                      <span class="text-white">Branding</span>
+                    </h1>
+                  </div>
                     </a>
                   </div>
 
                   <!-- second slide -->
                   <div class="carousel-item">
                     <a target="_blank" href="https://drive.google.com/drive/folders/1wToQjXERSkGD3r7SAv9H_wz2Pt4T5Nsf?usp=sharing">
-                    <img class="d-block img-thumb img-fluid work-slider-img" src="./image/item2.png"/>
+                      <div class="d-block img-thumb img-fluid work-slider-img concept-img"></div>
+                    <!-- <img class="d-block img-thumb w-100 work-slider-img" src="./image/item2.png"/> -->
                       <div class="carousel-caption d-md-block ">
                         <h1 class="blockquote text-carousel">
-                          <span class="text-white"> Concept Design</span>
+                          <span class="text-white">Concept Design</span>
                         </h1>
                       </div>
                       </a>
@@ -150,7 +155,8 @@
                   <!-- third slide -->
                   <div class="carousel-item">
                     <a target="_blank" href="https://github.com/Kishore121523?tab=repositories">
-                    <img class="d-block img-thumb img-fluid work-slider-img" src="./image/item3.png" />
+                      <div class="d-block img-thumb img-fluid work-slider-img web-img"></div>
+                    <!-- <img class="d-block img-thumb img-fluid work-slider-img" src="./image/item3.png" /> -->
                     <div class="carousel-caption d-md-block ">
                       <h1 class="blockquote text-carousel">
                         <span class="text-white">Web-Dev</span>
@@ -161,10 +167,11 @@
 
               
                   <!-- fourth slide -->
-                  <div class="carousel-item ">
+                  <div class="carousel-item">
                     <a target="_blank" href="https://drive.google.com/drive/folders/149P5cJOzn-FfWwi3DYN6OrDZQBq4Hfc6?usp=sharing">
-                    <img class="d-block img-thumb img-fluid work-slider-img" src="./image/item4.png"
-                       />
+                      <div class="d-block img-thumb img-fluid work-slider-img socialmedia-img"></div>
+                    <!-- <img class="d-block img-thumb img-fluid work-slider-img" src="./image/item4.png"
+                       /> -->
                     <div class="carousel-caption d-md-block ">
                       <h1 class="blockquote text-carousel">
                         <span class="text-white">Social Media Marketing</span>
@@ -175,13 +182,15 @@
                 </div>
               
                 <!-- CONTROLS for slider -->
+                <div class="">
                 <a href="#slider4" class="carousel-control-prev" data-slide="prev">
-                  <span class="carousel-control-prev-icon"></span>
+                  <span class="carousel-control-prev-icon mt-5"></span>
                 </a>
               
                 <a href="#slider4" class="carousel-control-next" data-slide="next">
-                  <span class="carousel-control-next-icon"></span>
+                  <span class="carousel-control-next-icon mt-5"></span>
                 </a>
+                </div>
               </div>
                 </div>
                 </section>
@@ -201,21 +210,13 @@
               <div class="row">
                 <div class="col-md-5 pt-1"> 
                  <form id="myForm">
-                    <!-- <div class="form-group">
-                      <label for="txt1">Name</label>
-                      <input name="name" type="text" class="form-control w-75" placeholder="Enter your name">
-                    </div> -->
+                    
                     <div class="form__group field w-100">
                       <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
                       <label for="name" class="form__label">Name</label>
                     </div>
 
-                    <!-- <div class="form-group">
-                      <label for="txt2">Email address</label>
-                      <input name="email" type="email" class="form-control w-75" aria-describedby="emailHelp"
-                        placeholder="Enter your email">
-                      <small id="emailHelp" class="form-text text-muted">You'r email won't be shared with anyone else.</small>
-                    </div> -->
+                    
                     <div class="form__group field pt-3 w-100">
                       <input type="input" class="form__field bg" placeholder="Name" name="email" id='email' required />
                       <small id="emailHelp" class="form-text text-muted">You'r email won't be shared with anyone else.</small>
@@ -226,11 +227,7 @@
 
                 <div class="col-md-7">
 
-                  <!-- <form id="myForm-1"> -->
-                    <!-- <div class="form-group">
-                      <label for="txt2">Message</label>
-                      <textarea name="message" class="form-control" rows="5" placeholder="Enter email"></textarea>
-                    </div> -->
+                  
                     <div class="form__group field w-100">
                       <textarea name="message" id='message' class="form__field" rows="4" type="input" placeholder="Enter email"></textarea>
                       <label for="message" class="form__label">Message</label>
@@ -309,12 +306,7 @@
                 | With love, <span class="text-footer">Kishore </span>|
               </p>
 
-              <!-- <p class="footer-text text-center pt-3 text-mut">
-                <a class="typewrite" data-period="1500"
-                  data-type='[ "| With love, Kishore |" ]'>
-                  <span class="wrap"></span>
-                </a>
-              </p> -->
+              
             </footer>
         
        <!-- <div class="">      -->
@@ -337,8 +329,8 @@
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
     crossorigin="anonymous"></script>
 
+  
   <script>
-
 
     // TypeWriter Animation
     var TxtType = function (el, toRotate, period) {

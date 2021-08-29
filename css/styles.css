@@ -126,6 +126,7 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
+
 .go-down {
   opacity: 80%;
   margin-left: 20%;
@@ -149,7 +150,8 @@ body {
 }
 /* work-section */
 .work-img {
-  padding: 5rem 0px;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
 }
 .work-slider-img {
   height: 80vh;
@@ -164,6 +166,40 @@ body {
 }
 .footer1 {
   background-color: #181816;
+}
+.click {
+  width: 2.5rem;
+  margin-bottom: 0.8rem;
+}
+.blockquote-custom {
+  /* margin-bottom: 1rem; */
+  font-size: 1.25rem;
+}
+
+/* images */
+.branding-img {
+  background-image: url(../image/item1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+.concept-img {
+  background-image: url(../image/item2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+.web-img {
+  background-image: url(../image/item3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+.socialmedia-img {
+  background-image: url(../image/item4.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
 }
 
 /* contact-section */
@@ -663,7 +699,7 @@ body {
 
   #home-section,
   #work-section {
-    background: url(../image/Rectangle\ 1.png);
+    background: url(../image/Rectangle\ 2.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -672,7 +708,7 @@ body {
   }
   #about-section,
   #contact-section {
-    background: url(../image/Rectangle\ 2.png);
+    background: url(../image/Rectangle\ 1.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
