@@ -686,6 +686,9 @@ header nav {
 
 /* small-screens */
 @media (max-width: 580px) {
+  .intro video {
+    display: none;
+  }
   #gallery a img {
     margin-bottom: 30px;
   }
