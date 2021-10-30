@@ -11,11 +11,10 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
-
-    <!-- font awesome -->
     <link rel="stylesheet" href="./webfonts/all.min.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link rel="stylesheet" href="./css/styles.css" />
+  
   <title>Potfolio-Kishore</title>
 </head>
 
@@ -23,6 +22,7 @@
 
 <body data-spy="scroll" data-target="#main-nav" id="home">
 
+  <header class="nav-close">
   <nav class="navbar navbar-expand-sm bg-dark-custom navbar-dark fixed-top " id="main-nav">
     <div class="container-custom-nav">
       <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
@@ -45,55 +45,37 @@
       </div>
     </div>
   </nav>
+  </header>
 
 
 
       <!-- Home -->
-      <div class="home-img content">
-        <section id="home-section" class="content" >
-            <div class="home-inner container-custom" >
-                <div class="kishore" data-aos="fade-up" data-aos-delay="500"
-                      data-aos-duration="2000">
-                      <div class="d-block text-center">
-                    <div id="content" class="d-flex justify-content-center align-items-middle hvr-wobble-vertical">
-                      <img src="./image/Kishore 2.svg" class="img-fluid mt-5 pt-5 mx-auto name" alt="">
-                    </div>
-              
-                    <div class="d-flex justify-content-center" id="main-nav">
-                        <a  href="#about-section"><img src="./image/Polygon 1.svg" class="go-down mt-5 pt-5 hvr-sink" alt=""></a>
-                    </div>
-                    </div>
-                </div>              
-            </div>
-        </section>
-        </div>
+      <div class="intro" id="home-section">
+        <h1 class="note1"><span class="orange font1 size1">Knock Knock!</span> </h1>
+        <h1 class="note2"><span class="font1 size3">I'd like to make the <span class="orange font1 size3">WORLD</span> a better place! </h1>
+        <h1 class="note3"><span class="size3 font1">Uhmmm... <span class="orange size3 font1">But they won't give me...</span></h1>
+        <h1 class="note4"><span class="orange font1 size1"> The Source Code</span></h1>
+        <h1 class="note5"><span class="font1 size1">Who is this<span class="orange font1 size1"> Rebel?</span></span></h1>
 
+        <video src="./Video/video1.mp4"></video>
+      </div>
 
         <!-- About -->
         <section id="about-section">
-          
+          <div class="about-text">
             <div class="home-inner container-custom">
               <div class="row">
-                <div class="col-md-6 my-auto" 
-                data-aos="fade-right"
-                data-aos-offset="300"
-                data-aos-delay="0"
-                data-aos-duration="1000"
-                data-aos-easing="ease-in-out"
-                data-aos-mirror="true"
-                data-aos-once="false"
-                data-aos-anchor-placement="top-bottom">
-                  <img src="./image/my image.png" alt="" class="img-fluid mx-auto d-block py-5">
+                <div class="col-md-6 my-auto" >
+                  <img src="./image/my image.png" alt="" class="img-fluid mx-auto d-block pt-5 pb-2">
                 </div>
                 <div class="col-md-6 my-auto">
                   <div class="about-text my-auto">
                   <h1 class="about-head pb-2">
                     <a class="typewrite" data-period="1500"
                       data-type='[ "Hello World!", "Bonjour Monde!", "Hola Mundo!", "Ciao Mondo!", "Namaste Duniya!" ]'>
-                      <span class="wrap"></span>
                     </a>
                   </h1>
-                <p class="about-text1 pt-2">An independent and self-motivated designer and front-end developer.</p>
+                <p class="about-text1 pt-2"><span class="text-white"> Meet Kishore,</span> an independent and self-motivated designer and front-end developer.</p>
                 <p class="about-text2">One who embraces teamwork. I always seek opportunities to learn new things. I love to create stuff that makes the world
                   a better place to live.</p>
                       <p class="resume text-decoration-none">
@@ -104,16 +86,17 @@
                 </div>
               </div>
             </div>
+            </div>
         </section>
 
 
 
         <!-- Work -->
-        <section id="work-section" class="content">
+        <section id="work-section" class="content" >
           
             <div class="home-inner container-custom work-img">
 
-              <div id="slider4" class="carousel slide" data-ride="carousel">
+              <div id="slider4" class="carousel slide" data-ride="carousel" >
                 <ol class="carousel-indicators">
                   <li class="active" data-target="#slider4" data-slide-to="0"></li>
                   <li data-target="#slider4" data-slide-to="1"></li>
@@ -126,14 +109,12 @@
                 </span>
               
 
-                <div class="carousel-inner  hvr-overline-from-center">
+                <div class="carousel-inner hvr-overline-from-center">
 
                   <!-- first slide -->
                   <div class="carousel-item active text-center">
                     <a target="_blank" href="https://drive.google.com/drive/folders/19ftj4U6_HRe2LPjoaH1CZjaQsGaFnnJM?usp=sharing" class="">
                     <div class="d-block img-thumb img-fluid work-slider-img branding-img"></div>
-                    <!-- <img class="d-block img-thumb img-fluid work-slider-img " src="./image/item1.png" alt="First Slide"
-                    /> -->
                   <div class="carousel-caption d-md-block ">
                     <h1 class="blockquote text-carousel">
                       <span class="text-white">Branding</span>
@@ -147,7 +128,6 @@
                       <div class="carousel-item">
                         <a target="_blank" href="work.html">
                           <div class="d-block img-thumb img-fluid work-slider-img web-img"></div>
-                          <!-- <img class="d-block img-thumb img-fluid work-slider-img" src="./image/item3.png" /> -->
                           <div class="carousel-caption d-md-block ">
                             <h1 class="blockquote text-carousel">
                               <span class="text-white">Web-Dev</span>
@@ -160,7 +140,6 @@
                   <div class="carousel-item">
                     <a target="_blank" href="https://drive.google.com/drive/folders/1wToQjXERSkGD3r7SAv9H_wz2Pt4T5Nsf?usp=sharing">
                       <div class="d-block img-thumb img-fluid work-slider-img concept-img"></div>
-                      <!-- <img class="d-block img-thumb w-100 work-slider-img" src="./image/item2.png"/> -->
                       <div class="carousel-caption d-md-block ">
                         <h1 class="blockquote text-carousel">
                           <span class="text-white">Concept Design</span>
@@ -175,8 +154,6 @@
                   <div class="carousel-item">
                     <a target="_blank" href="https://drive.google.com/drive/folders/149P5cJOzn-FfWwi3DYN6OrDZQBq4Hfc6?usp=sharing">
                       <div class="d-block img-thumb img-fluid work-slider-img socialmedia-img"></div>
-                    <!-- <img class="d-block img-thumb img-fluid work-slider-img" src="./image/item4.png"
-                    /> -->
                     <div class="carousel-caption d-md-block ">
                       <h1 class="blockquote text-carousel">
                         <span class="text-white">Social Media Marketing</span>
@@ -206,9 +183,15 @@
         <section id="contact-section">
           
             <div class="home-inner container-custom">
-              <div class="d-block text-center p-2">
+              <div class="d-block text-center p-2" >
                 <img src="./image/Lets talk.png" class="mt-4 img-fluid" alt="">
-                <p class="blockquote mt-4">Get in touch via the form below, or by emailing 
+                <p class="blockquote mt-4"  data-aos="fade-out"
+                data-aos-offset="300"
+                data-aos-delay="0"
+                data-aos-duration="1000"
+                data-aos-easing="ease-out"
+                data-aos-once="false"
+                data-aos-anchor-placement="bottom">Get in touch via the form below, or by emailing 
                   <a href="mailto:contactkishorework@gmail.com?" class="text-decoration-none text-mail mail hvr-underline-from-center">contactkishorework@gmail.com</a></p>
               </div>
 
@@ -269,20 +252,32 @@
               <img src="./image/Thank you, Cheers!.png" class=" my-5 mx-auto thank-you" alt="">
               </div>
       
-                    <div class="row">
-                      <div class="col-auto mr-auto margin-small">
+                    <div class="row" >
+                      <div class="col-auto mr-auto margin-small" >
                             <div class="d-flex justify-content-center pb-2">
-                              <div class="p-4">
+                              <div class="p-4"  data-aos="fade-right"
+                              data-aos-offset="4"
+                              data-aos-duration="1000"
+                              data-aos-easing="ease-in"
+                              data-aos-anchor-placement="bottom-middle">
                                 <a target="_blank" href="https://www.linkedin.com/in/kishore-yogeswaran-7946291a6/">
                                   <i class="fab fa-linkedin text-icon"></i>
                                 </a>
                               </div>
-                              <div class="p-4 ">
+                              <div class="p-4 " data-aos="fade-right"
+                              data-aos-offset="4"
+                              data-aos-duration="1000"
+                              data-aos-easing="ease-in"
+                              data-aos-anchor-placement="bottom-middle" >
                                 <a target="_blank" href="https://github.com/Kishore121523">
                                   <i class="fab fa-github text-icon"></i>
                                 </a>
                               </div>
-                              <div class="p-4">
+                              <div class="p-4" data-aos="fade-right"
+                              data-aos-offset="4"
+                              data-aos-duration="1000"
+                              data-aos-easing="ease-in"
+                              data-aos-anchor-placement="bottom-middle">
                                 <a target="_blank" href="https://www.instagram.com/_kishoredesigns_/">
                                   <i class="fab fa-instagram text-icon"></i>
                                 </a>
@@ -290,8 +285,12 @@
                             </div>
                       </div>
                       <div class="col-auto" id="main-nav">
-                          <a href="#home-section">
-                        <i class="fa fa-arrow-circle-up text-icon-up"></i></a>
+                          <a href="#home-section" >
+                        <i class="fa fa-arrow-circle-up text-icon-up" data-aos="fade-left"
+                              data-aos-offset="4"
+                              data-aos-duration="1000"
+                              data-aos-easing="ease-in"
+                              data-aos-anchor-placement="bottom-middle"></i></a>
                       </div>
                   </div>
               </div>
@@ -323,126 +322,13 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
     crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js" integrity="sha512-judXDFLnOTJsUwd55lhbrX3uSoSQSOZR6vNrsll+4ViUFv+XOIr/xaIK96soMj6s5jVszd7I97a0H+WhgFwTEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.js" integrity="sha512-mq6TSOBEH8eoYFBvyDQOQf63xgTeAk7ps+MHGLWZ6Byz0BqQzrP+3GIgYL+KvLaWgpL8XgDVbIRYQeLa3Vqu6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./Javascript/anim.js"></script>    
+    <script src="./Javascript/index.js"></script>
 
-  
-  <script>
-
-    function sendMail() {
-        Email.send({
-          // Host: "smtp.gmail.com",
-          // Username: "sparksdonation123@gmail.com",
-          // Password: "yoggaykis989",
-          SecureToken: "b9409e6f-9fd5-47cd-b3ee-6f7c0ad00783",
-          To: "contactkishorework@gmail.com",
-          From: `${document.getElementById("email").value}`,
-          Subject: `Sender Name - ${document.getElementById("name").value}`,
-          Body: `${document.getElementById("message").value}`,
-        })
-        document.getElementById("name").value = ''
-        document.getElementById("email").value = ''
-        document.getElementById("message").value = ''
-        // .then((message) => alert(message));
-      }
-
-    // TypeWriter Animation
-    var TxtType = function (el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
-        this.txt = '';
-        this.tick();
-        this.isDeleting = false;
-      };
-
-      TxtType.prototype.tick = function () {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
-
-        if (this.isDeleting) {
-          this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-          this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
-
-        this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
-
-        var that = this;
-        var delta = 200 - Math.random() * 100;
-
-        if (this.isDeleting) { delta /= 2; }
-
-        if (!this.isDeleting && this.txt === fullTxt) {
-          delta = this.period;
-          this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
-          this.isDeleting = false;
-          this.loopNum++;
-          delta = 500;
-        }
-
-        setTimeout(function () {
-          that.tick();
-        }, delta);
-      };
-
-      window.onload = function () {
-        var elements = document.getElementsByClassName('typewrite');
-        for (var i = 0; i < elements.length; i++) {
-          var toRotate = elements[i].getAttribute('data-type');
-          var period = elements[i].getAttribute('data-period');
-          if (toRotate) {
-            new TxtType(elements[i], JSON.parse(toRotate), period);
-          }
-        }
-        // INJECT CSS
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-        document.body.appendChild(css);
-      };
-
-    function myFunction() {
-        document.getElementById("myForm").reset();
-           
-      }
-    // animate on scroll
-    AOS.init();
-
-    //cursor animation
-    var cursor = document.querySelector(".cursor");
-      var cursor2 = document.querySelector(".cursor2");
-      document.addEventListener("mousemove", function (e) {
-        cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
-      });
-
-    //init scrollspy
-    $("body").scrollspy({ target: "#main-nav" });
-
-    // Add smooth scrolling
-    $("#main-nav a").on("click", function (e) {
-      // Check for a hash value
-      if (this.hash !== "") {
-        // Prevent default behavior
-        e.preventDefault();
-
-        // Store hash
-        const hash = this.hash;
-
-        // Animate smooth scroll
-        $("html, body").animate(
-          {
-            scrollTop: $(hash).offset().top,
-          },
-          900,
-          function () {
-            // Add hash to URL after scroll
-            window.location.hash = hash;
-          }
-        );
-      }
-    });
-      </script>
 </body>
 </html>
 
