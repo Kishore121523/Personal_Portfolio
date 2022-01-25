@@ -138,27 +138,3 @@ $("#main-nav a").on("click", function(e) {
         );
     }
 });
-
-// // Modal
-
-// let modal = document.getElementById("modalPics1");
-// let modalBtn = document.getElementById("modal1");
-// let closeBtn = document.getElementById("closeBtn");
-
-// modalBtn.addEventListener("click", openModal);
-// closeBtn.addEventListener("click", closeModal);
-// window.addEventListener('click', clickOutside)
-
-// function openModal() {
-//     modal.style.display = "block";
-// }
-
-// function closeModal() {
-//     modal.style.display = 'none'
-// }
-
-// function clickOutside(e) {
-//     if (e.target == modal) {
-//         modal.style.display = 'none'
-//     }
-// }

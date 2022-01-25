@@ -308,18 +308,18 @@ header nav {
 
 .about-text1 {
     color: #fb7712;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     margin-top: 2rem;
     line-height: 2.5rem;
 }
 
 .about-text2 {
     font-size: 1.4rem;
-    line-height: 2.5rem;
+    line-height: 2rem;
 }
 
 .about-head {
-    font-size: 3rem;
+    font-size: 3.2rem;
 }
 
 .resume {
@@ -336,24 +336,6 @@ header nav {
 
 
 /* about section end */
-
-.abc {
-    position: relative;
-    width: 100%;
-    background-color: #fb7712;
-    height: 10rem;
-}
-
-.abcInside {
-    position: absolute;
-    background-color: rgb(228, 228, 228);
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-}
 
 
 /* work-section */
@@ -398,28 +380,28 @@ header nav {
 /* images for work carousel */
 
 .branding-img {
-    background-image: url(../image/item1.png);
+    background-image: url(../image/item1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     overflow-x: hidden;
 }
 
 .concept-img {
-    background-image: url(../image/item2.png);
+    background-image: url(../image/item2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     overflow-x: hidden;
 }
 
 .web-img {
-    background-image: url(../image/item3.png);
+    background-image: url(../image/item3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     overflow-x: hidden;
 }
 
 .socialmedia-img {
-    background-image: url(../image/item4.png);
+    background-image: url(../image/item4.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     overflow-x: hidden;
@@ -878,6 +860,24 @@ header nav {
         width: 100%;
         overflow-x: hidden;
     }
+    .about-head {
+        margin-top: 1.5rem;
+    }
+    .about-text {
+        padding: 2rem 1rem;
+    }
+    .about-text1 {
+        /* margin-top: 5px; */
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+    .about-text2 {
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+    .resume {
+        font-size: 1.2rem;
+    }
     .text-icon {
         font-size: 1.3rem;
         display: block;
@@ -934,12 +934,21 @@ header nav {
     }
     .about-head {
         font-size: 2.6rem;
+        padding-bottom: 2px;
+    }
+    .about-text {
+        margin-top: 1rem;
+        padding: 5px;
     }
     .about-text1 {
         font-size: 1.4rem;
-        margin-top: 2rem;
+        line-height: 2rem;
     }
     .about-text2 {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+    .resume {
         font-size: 1.2rem;
     }
     .text-icon {
@@ -1047,7 +1056,7 @@ header nav {
         font-size: 2rem;
     }
     .home-img {
-        background: url(../image/Artboard\ 1\ copy\ 4@4x.png);
+        background: url(../image/Artboard\ 1\ copy\ 4@4x.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;

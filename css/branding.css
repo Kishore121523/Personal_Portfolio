@@ -1,0 +1,162 @@
+ .portfolio {
+     display: grid;
+     height: 100%;
+     grid-template-rows: repeat(8, 1fr);
+     grid-template-columns: repeat(5, 1fr);
+     gap: 20px;
+ }
+ 
+ .portfolio-item.medium {
+     grid-row: span 3;
+     grid-column: span 2;
+ }
+ 
+ .portfolio-item.large {
+     grid-row: span 2;
+     grid-column: span 1;
+ }
+ 
+ .portfolio-item.small {
+     grid-row: span 1;
+     grid-column: span 1;
+ }
+ 
+ .portfolio-item.tall {
+     grid-row: span 5;
+     grid-column: span 2;
+ }
+ 
+ .portfolio-item.wide {
+     grid-row: span 2;
+     grid-column: span 3;
+ }
+ 
+ .portfolio-item.half-medium {
+     grid-row: span 3;
+     grid-column: span 1;
+ }
+ 
+ .one {
+     background-image: url(../image/Branding/a.jpg);
+     position: relative;
+     background-color: #d8d8d6;
+     background-blend-mode: multiply;
+ }
+ 
+ .two {
+     background-image: url(../image/Branding/b.jpg);
+     position: relative;
+     background-color: #d8d8d6;
+     background-blend-mode: multiply;
+ }
+ 
+ .three {
+     background-image: url(../image/Branding/c.jpg);
+     position: relative;
+     background-color: #d8d8d6;
+     background-blend-mode: multiply;
+ }
+ 
+ .four {
+     color: #fb7712;
+     background-color: #181816;
+     transition: all ease-in-out 300ms;
+     border: 1px solid #181816;
+ }
+ 
+ .four:hover {
+     border: 1px solid #fb7712;
+     cursor: auto;
+ }
+ 
+ .five {
+     background-image: url(../image/Branding/d.jpg);
+     position: relative;
+     background-color: #d8d8d6;
+     background-blend-mode: multiply;
+ }
+ 
+ .six {
+     background-image: url(../image/Branding/g.jpg);
+     position: relative;
+     background-color: #d8d8d6;
+     background-blend-mode: multiply;
+ }
+ 
+ .seven {
+     background-image: url(../image/Branding/f.jpg);
+     position: relative;
+     background-color: #d8d8d6;
+     background-blend-mode: multiply;
+ }
+ 
+ .eight {
+     background-image: url(../image/Branding/e.jpg);
+     position: relative;
+     background-color: #d8d8d6;
+     background-blend-mode: multiply;
+ }
+ 
+ .nine {
+     background-image: url(../image/Branding/h.jpg);
+     position: relative;
+     background-color: #d8d8d6;
+     background-blend-mode: multiply;
+ }
+ 
+ #drive {
+     display: flex;
+     align-items: center;
+     transition: all ease-in-out 300ms;
+ }
+ 
+ #drive:hover {
+     text-decoration: none;
+ }
+ 
+ .drive-icon {
+     color: #fb7712;
+     font-size: 1.5rem;
+     transition: all 0.5s ease;
+ }
+ 
+ .drive-icon:hover {
+     color: rgb(228, 228, 228);
+ }
+ 
+ @media (max-width: 580px) {
+     .portfolio {
+         display: grid;
+         height: 100%;
+         grid-template-rows: repeat(7, 1fr);
+         grid-template-columns: repeat(4, 1fr);
+         gap: 20px;
+     }
+     .portfolio-item.medium {
+         grid-row: span 3;
+         grid-column: span 1;
+     }
+     .four {
+         font-size: 1rem;
+     }
+     .portfolio-item.large {
+         grid-row: span 2;
+         grid-column: span 2;
+     }
+     .portfolio-item.small {
+         grid-row: span 1;
+         grid-column: span 2;
+     }
+     .portfolio-item.tall {
+         grid-row: span 3;
+         grid-column: span 2;
+     }
+     .portfolio-item.wide {
+         grid-row: span 2;
+         grid-column: span 2;
+     }
+     .portfolio-item.half-medium {
+         grid-row: span 1;
+         grid-column: span 2;
+     }
+ }

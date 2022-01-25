@@ -157,37 +157,7 @@
         border-radius: 10px;
     }
     
-    .portfolio-item.medium {
-        grid-row: span 2;
-        grid-column: span 2;
-    }
-    
-    .portfolio-item.large {
-        grid-row: span 3;
-        grid-column: span 3;
-    }
-    
-    .portfolio-item.small {
-        grid-row: span 1;
-        grid-column: span 1;
-    }
-    
-    .portfolio-item.tall {
-        grid-row: span 3;
-        grid-column: span 2;
-    }
-    
-    .portfolio-item.wide {
-        grid-row: span 2;
-        grid-column: span 3;
-    }
-    
-    .portfolio-item.half-medium {
-        grid-row: span 2;
-        grid-column: span 1;
-    }
-    
-    .portfolio-item a {
+    .portfolio-item img {
         text-decoration: none;
         color: #fb7712;
     }
@@ -332,74 +302,6 @@
         }
     }
     
-    .one {
-        background-image: url(../image/donate.png);
-        position: relative;
-        background-color: #d8d8d6;
-        background-blend-mode: multiply;
-    }
-    
-    .two {
-        background-image: url(../image/rice\ mill.png);
-        position: relative;
-        background-color: #d8d8d6;
-        background-blend-mode: multiply;
-    }
-    
-    .three {
-        background-image: url(../image/travel.png);
-        position: relative;
-        background-color: #d8d8d6;
-        background-blend-mode: multiply;
-    }
-    
-    .four {
-        color: #fb7712;
-        background-color: #181816;
-        transition: all ease-in-out 300ms;
-        border: 1px solid #181816;
-    }
-    
-    .four:hover {
-        border: 1px solid #fb7712;
-        cursor: auto;
-    }
-    
-    .five {
-        background-image: url(../image/weather.png);
-        position: relative;
-        background-color: #d8d8d6;
-        background-blend-mode: multiply;
-    }
-    
-    .six {
-        background-image: url(../image/glozzom.png);
-        position: relative;
-        background-color: #d8d8d6;
-        background-blend-mode: multiply;
-    }
-    
-    .seven {
-        background-image: url(../image/tesla.png);
-        position: relative;
-        background-color: #d8d8d6;
-        background-blend-mode: multiply;
-    }
-    
-    .eight {
-        background-image: url(../image/rps.png);
-        position: relative;
-        background-color: #d8d8d6;
-        background-blend-mode: multiply;
-    }
-    
-    .nine {
-        background-image: url(../image/mizuse.png);
-        position: relative;
-        background-color: #d8d8d6;
-        background-blend-mode: multiply;
-    }
-    
     .image {
         background-position: center;
         background-size: cover;
@@ -418,7 +320,7 @@
     
     .text-icon {
         color: #fb7712;
-        font-size: 2rem;
+        font-size: 1.5rem;
         transition: all 0.5s ease;
     }
     
@@ -430,66 +332,103 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 30px;
-    }
-    /* footer */
-    
-    .text-footer {
-        color: #fb7712;
+        margin-top: 2.2rem;
     }
     
-    .footer1 {
-        margin-top: 2rem;
-        background-color: #181816;
+    .iconDiv {
+        position: fixed;
+        right: 0px;
+        bottom: 0px;
+        width: 200px;
+        height: 15px;
+        text-align: center;
+        margin-bottom: 3.5rem;
+        z-index: 100;
+        margin-right: 20px;
     }
     
-    @media (max-width: 991.98px) {}
+    .dispNone {
+        opacity: 0;
+        transition: all 1s ease-in-out;
+    }
     
-    @media (max-width: 580px) {
-        figure h2 {
-            /* display: none; */
-            font-size: 1.5rem;
+    .iconDiv i {
+        animation: dbl 1s infinite;
+    }
+    
+    .dblText {
+        font-size: 0.7rem;
+        font-family: "Sofia Pro", sans-serif;
+        text-align: center;
+        width: 200px;
+        margin-top: 0.5rem;
+    }
+    
+    .lightboxIcon {
+        color: rgba(255, 255, 255, 0.5);
+    }
+    
+    @keyframes dbl {
+        0% {
+            transform: scale(1);
         }
-        .flex-footer {
-            margin-top: 20px;
+        25% {
+            transform: scale(1.05);
         }
-        .text-icon {
-            font-size: 1.25rem;
+        50% {
+            transform: scale(1.08);
         }
-        .github-text {
-            font-size: 1rem;
+        75% {
+            transform: scale(1.03);
         }
-        .portfolio {
-            display: grid;
-            height: 100%;
-            grid-template-rows: repeat(17, 1fr);
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+        100% {
+            transform: scale(0.95);
         }
-        .portfolio-item.medium {
-            grid-row: span 3;
-            grid-column: span 4;
+    }
+    
+    .zoom {
+        transform: scale(1.5);
+        transition: all 300ms ease-in-out;
+    }
+    
+    .zoomOut {
+        transform: scale(1);
+        transition: all 300ms ease-in-out;
+    }
+    
+    #lightbox {
+        position: fixed;
+        /* position: relative; */
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: none;
+        z-index: 1000;
+    }
+    
+    #lightbox.active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: disp 0.5s forwards;
+    }
+    
+    @keyframes disp {
+        0% {
+            opacity: 0;
         }
-        .portfolio-item.large {
-            grid-row: span 3;
-            grid-column: span 4;
+        100% {
+            opacity: 1;
         }
-        .portfolio-item.small {
-            grid-row: span 2;
-            grid-column: span 2;
-        }
-        .portfolio-item.tall {
-            grid-row: span 2;
-            grid-column: span 2;
-        }
-        .portfolio-item.wide {
-            grid-row: span 2;
-            grid-column: span 4;
-        }
-        .portfolio-item.half-medium {
-            grid-row: span 2;
-            grid-column: span 2;
-        }
+    }
+    
+    #lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        padding: 4px;
+        border-radius: 10px;
+        z-index: 100;
     }
     
     figure.effect-sadie figcaption::before {
@@ -499,6 +438,7 @@
         width: 100%;
         height: 100%;
         border-radius: 10px;
+        border: 1px solid #fb7712;
         background: -webkit-linear-gradient(top, rgba(235, 235, 235, 0) 0%, rgba(31, 30, 30, 0.8) 75%);
         background: linear-gradient(to bottom, rgba(235, 235, 235, 0) 0%, rgba(31, 30, 30, 0.8) 75%);
         content: '';
@@ -507,7 +447,7 @@
         transform: translate3d(0, 10%, 0);
     }
     
-    figure.effect-sadie h2 {
+    figure.effect-sadie h3 {
         text-align: center;
         position: absolute;
         top: 50%;
@@ -526,7 +466,7 @@
         transition: opacity 0.35s, transform 0.35s;
     }
     
-    figure.effect-sadie:hover h2 {
+    figure.effect-sadie:hover h3 {
         opacity: 1;
         color: #fff;
         -webkit-transform: translate3d(0, -10%, 0) translate3d(0, -10px, 0);
@@ -538,4 +478,53 @@
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
         cursor: pointer;
+    }
+    /* footer */
+    
+    .text-footer {
+        color: #fb7712;
+    }
+    
+    .footer1 {
+        margin-top: 2rem;
+        background-color: #181816;
+    }
+    
+    @media (max-width: 991.98px) {
+        h3 {
+            font-size: 1.2rem;
+        }
+        .flex-footer {
+            margin-top: 20px;
+        }
+        .iconDiv {
+            display: none;
+        }
+    }
+    
+    @media (max-width: 580px) {
+        .iconDiv {
+            display: none;
+        }
+        figure h3 {
+            display: none;
+        }
+        .flex-footer {
+            margin-top: 20px;
+        }
+        .footer-text {
+            font-size: 0.9rem;
+        }
+        .drive-text {
+            font-size: 1rem;
+        }
+        .drive-icon::before {
+            font-size: 1.3rem;
+        }
+        .text-icon {
+            font-size: 1.25rem;
+        }
+        .github-text {
+            font-size: 1rem;
+        }
     }

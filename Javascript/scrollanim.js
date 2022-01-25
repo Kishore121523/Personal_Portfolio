@@ -14,7 +14,7 @@ const controller1 = new ScrollMagic.Controller();
 
 // Scenes
 let scene = new ScrollMagic.Scene({
-        duration: 13000,
+        duration: 12000,
         triggerElement: intro,
         triggerHook: 0,
     })
@@ -37,7 +37,7 @@ var wipeAnimation = new TimelineMax()
 new ScrollMagic.Scene({
         triggerElement: intro,
         triggerHook: "onLeave",
-        duration: 12000,
+        duration: 11000,
     })
     .setPin(scene)
     .setTween(wipeAnimation)

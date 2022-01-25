@@ -1,0 +1,134 @@
+    .portfolio-item.medium {
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+    
+    .portfolio-item.large {
+        grid-row: span 3;
+        grid-column: span 3;
+    }
+    
+    .portfolio-item.small {
+        grid-row: span 1;
+        grid-column: span 1;
+    }
+    
+    .portfolio-item.tall {
+        grid-row: span 3;
+        grid-column: span 2;
+    }
+    
+    .portfolio-item.wide {
+        grid-row: span 2;
+        grid-column: span 3;
+    }
+    
+    .portfolio-item.half-medium {
+        grid-row: span 2;
+        grid-column: span 1;
+    }
+    
+    .one {
+        background-image: url(../image/WebDev/donate.jpg);
+        position: relative;
+        background-color: #d8d8d6;
+        background-blend-mode: multiply;
+    }
+    
+    .two {
+        background-image: url(../image/WebDev/rice\ mill.jpg);
+        position: relative;
+        background-color: #d8d8d6;
+        background-blend-mode: multiply;
+    }
+    
+    .three {
+        background-image: url(../image/WebDev/travel.jpg);
+        position: relative;
+        background-color: #d8d8d6;
+        background-blend-mode: multiply;
+    }
+    
+    .four {
+        color: #fb7712;
+        background-color: #181816;
+        transition: all ease-in-out 300ms;
+        border: 1px solid #181816;
+    }
+    
+    .four:hover {
+        border: 1px solid #fb7712;
+        cursor: auto;
+    }
+    
+    .five {
+        background-image: url(../image/WebDev/weather.jpg);
+        position: relative;
+        background-color: #d8d8d6;
+        background-blend-mode: multiply;
+    }
+    
+    .six {
+        background-image: url(../image/WebDev/glozzom.jpg);
+        position: relative;
+        background-color: #d8d8d6;
+        background-blend-mode: multiply;
+    }
+    
+    .seven {
+        background-image: url(../image/WebDev/tesla.jpg);
+        position: relative;
+        background-color: #d8d8d6;
+        background-blend-mode: multiply;
+    }
+    
+    .eight {
+        background-image: url(../image/WebDev/rps.jpg);
+        position: relative;
+        background-color: #d8d8d6;
+        background-blend-mode: multiply;
+    }
+    
+    .nine {
+        background-image: url(../image/WebDev/mizuse.jpg);
+        position: relative;
+        background-color: #d8d8d6;
+        background-blend-mode: multiply;
+    }
+    
+    @media (max-width: 580px) {
+        .portfolio {
+            display: grid;
+            height: 100%;
+            grid-template-rows: repeat(17, 1fr);
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .portfolio-item.medium {
+            grid-row: span 3;
+            grid-column: span 4;
+        }
+        .portfolio-item.large {
+            grid-row: span 3;
+            grid-column: span 4;
+        }
+        .portfolio-item.small {
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+        .portfolio-item.tall {
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+        .portfolio-item.wide {
+            grid-row: span 2;
+            grid-column: span 4;
+        }
+        .portfolio-item.half-medium {
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+        .four {
+            font-size: 1rem;
+        }
+    }
