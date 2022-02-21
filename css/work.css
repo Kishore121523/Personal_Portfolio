@@ -500,9 +500,15 @@
         .iconDiv {
             display: none;
         }
+        #cursor-d-none {
+            display: none;
+        }
     }
     
     @media (max-width: 580px) {
+        #cursor-d-none {
+            display: none;
+        }
         .iconDiv {
             display: none;
         }

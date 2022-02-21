@@ -8,59 +8,64 @@ const images = document.querySelectorAll('.image');
 $(".image").on("click", "a", function(e) { e.preventDefault() });
 
 images.forEach(image => {
-    image.addEventListener('click', e => {
-        lightbox.classList.add('active')
-        const img = document.createElement('img');
-        const divIcon = document.createElement('div');
-        const icon = document.createElement('i');
-        const dblText = document.createElement('p');
+    if (!image.classList.contains('four')) {
 
-        divIcon.className = 'iconDiv'
-        dblText.className = 'dblText'
-        icon.className = 'lightboxIcon'
-        icon.classList.add('fas')
-        icon.classList.add('fa-hand-point-up')
-        dblText.innerHTML = " Double Tap the Image to Zoom"
 
-        img.src = image.children[0].href;
+        image.addEventListener('click', e => {
+            lightbox.classList.add('active')
+            const img = document.createElement('img');
+            const divIcon = document.createElement('div');
+            const icon = document.createElement('i');
+            const dblText = document.createElement('p');
 
-        while (lightbox.firstChild) {
-            lightbox.removeChild(lightbox.firstChild)
-        }
+            divIcon.className = 'iconDiv'
+            dblText.className = 'dblText'
+            icon.className = 'lightboxIcon'
+            icon.classList.add('fas')
+            icon.classList.add('fa-hand-point-up')
+            dblText.innerHTML = "Double Tap the Image to Zoom"
 
-        lightbox.appendChild(img);
-        lightbox.appendChild(divIcon);
-        divIcon.appendChild(icon);
-        icon.appendChild(dblText)
+            img.src = image.children[0].href;
 
-        let currentlyListening = false;
-        img.addEventListener('dblclick', e => {
-            if (!currentlyListening) {
-                zoomIn();
-            } else {
-                zoomOut();
+            while (lightbox.firstChild) {
+                lightbox.removeChild(lightbox.firstChild)
             }
+
+            lightbox.appendChild(img);
+            lightbox.appendChild(divIcon);
+            divIcon.appendChild(icon);
+            icon.appendChild(dblText)
+
+            let currentlyListening = false;
+
+            img.addEventListener('dblclick', e => {
+                if (!currentlyListening) {
+                    zoomIn();
+                } else {
+                    zoomOut();
+                }
+            })
+
+            function zoomIn() {
+                img.classList.remove("zoomOut");
+                img.classList.add("zoom");
+                currentlyListening = !currentlyListening;
+            }
+
+            function zoomOut() {
+                img.classList.add("zoomOut");
+                img.classList.remove("zoom");
+                currentlyListening = !currentlyListening;
+            }
+
+            setTimeout(dispNone, 2800);
+
+            function dispNone() {
+                divIcon.classList.add('dispNone')
+            }
+
         })
-
-        function zoomIn() {
-            img.classList.remove("zoomOut");
-            img.classList.add("zoom");
-            currentlyListening = !currentlyListening;
-        }
-
-        function zoomOut() {
-            img.classList.add("zoomOut");
-            img.classList.remove("zoom");
-            currentlyListening = !currentlyListening;
-        }
-
-        setTimeout(dispNone, 2800);
-
-        function dispNone() {
-            divIcon.classList.add('dispNone')
-        }
-
-    })
+    }
 })
 
 

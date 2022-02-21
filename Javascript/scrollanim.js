@@ -44,7 +44,7 @@ new ScrollMagic.Scene({
     .addTo(controller1);
 
 // Animation
-let accelamount = 0.1;
+let accelamount = 0.5;
 let scrollposition = 0;
 let delay = 0;
 

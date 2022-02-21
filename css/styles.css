@@ -9,7 +9,7 @@
 
 body {
     width: 100%;
-    background: black;
+    background: #070708;
     color: rgb(228, 228, 228);
     overflow-x: hidden;
     font-family: "Sofia Pro", sans-serif;
@@ -199,6 +199,7 @@ header nav {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    background-position: center;
 }
 
 .intro h1 {
@@ -266,7 +267,7 @@ header nav {
 /* Backgorund for section */
 
 #work-section {
-    background: url(../image/Rectangle\ 2.png);
+    /* background: url(../image/Rectangle\ 2.png); */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -276,7 +277,7 @@ header nav {
 }
 
 #about-section {
-    background: url(../image/Rectangle\ 2.png);
+    /* background: url(../image/Rectangle\ 2.png); */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -286,7 +287,7 @@ header nav {
 }
 
 #contact-section {
-    background: url(../image/Rectangle\ 2.png);
+    /* background: url(../image/Rectangle\ 2.png); */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -308,14 +309,14 @@ header nav {
 
 .about-text1 {
     color: #fb7712;
-    font-size: 1.8rem;
-    margin-top: 2rem;
-    line-height: 2.5rem;
+    font-size: 1.5rem;
+    margin-top: 1.6rem;
+    line-height: 1.8rem;
 }
 
 .about-text2 {
-    font-size: 1.4rem;
-    line-height: 2rem;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
 }
 
 .about-head {
@@ -327,7 +328,7 @@ header nav {
     color: rgb(228, 228, 228);
     ;
     transition: all 0.2s ease;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .resume:hover {
@@ -867,7 +868,6 @@ header nav {
         padding: 2rem 1rem;
     }
     .about-text1 {
-        /* margin-top: 5px; */
         font-size: 1.6rem;
         line-height: 2rem;
     }
@@ -890,7 +890,6 @@ header nav {
         width: 70%;
     }
     .text-carousel {
-        /* margin-bottom: 30%; */
         font-size: 4rem;
     }
     .carousel-caption-custom {
@@ -1048,18 +1047,22 @@ header nav {
         font-size: 4rem;
     }
     .about-text1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
         line-height: 1.2;
         margin-top: 2rem;
     }
     .about-text2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        line-height: 1.2;
     }
     .home-img {
         background: url(../image/Artboard\ 1\ copy\ 4@4x.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
+    }
+    #contact-section {
+        min-height: auto;
     }
 }
 
